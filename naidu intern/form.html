@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder Form</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Resume Builder</h1>
+</header>
+
+<div class="container">
+
+    <!-- Progress Bar -->
+
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <form id="resumeForm">
+
+        <!-- ==========================
+             PERSONAL INFORMATION
+        =========================== -->
+
+        <h2 class="section-title">
+            Personal Information
+        </h2>
+
+        <div class="photo-upload">
+
+            <img src="images/profile.png"
+                id="previewImage"
+                alt="Profile">
+
+            <input
+                type="file"
+                id="profileImage"
+                accept="image/*">
+
+        </div>
+
+        <div class="form-grid">
+
+            <div class="input-group">
+
+                <label>Full Name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your full name"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Phone</label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Phone Number"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Date of Birth</label>
+
+                <input
+                    type="date"
+                    id="dob">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>LinkedIn</label>
+
+                <input
+                    type="url"
+                    id="linkedin"
+                    placeholder="LinkedIn Profile">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>GitHub</label>
+
+                <input
+                    type="url"
+                    id="github"
+                    placeholder="GitHub Profile">
+
+            </div>
+
+            <div class="input-group full-width">
+
+                <label>Address</label>
+
+                <textarea
+                    id="address"
+                    rows="3"
+                    placeholder="Enter your address"></textarea>
+
+            </div>
+
+        </div>
+
+        <!-- ==========================
+             CAREER OBJECTIVE
+        =========================== -->
+
+        <h2 class="section-title">
+            Career Objective
+        </h2>
+
+        <div class="card">
+
+            <div class="input-group">
+
+                <label>Career Objective</label>
+
+                <textarea
+                    id="objective"
+                    rows="5"
+                    placeholder="Write your career objective..."></textarea>
+
+            </div>
+
+        </div>
+
+        <!-- ==========================
+             EDUCATION
+        =========================== -->
+
+        <h2 class="section-title">
+            Education
+        </h2>
+
+        <div id="educationContainer">
+
+            <div class="card education-item">
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+                        <label>College / School</label>
+                        <input type="text" name="college[]">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Degree</label>
+                        <input type="text" name="degree[]">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Specialization</label>
+                        <input type="text" name="specialization[]">
+                    </div>
+
+                    <div class="input-group">
+                        <label>CGPA / Percentage</label>
+                        <input type="text" name="cgpa[]">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Start Year</label>
+                        <input type="month" name="startYear[]">
+                    </div>
+
+                    <div class="input-group">
+                        <label>End Year</label>
+                        <input type="month" name="endYear[]">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button
+            type="button"
+            class="add-btn"
+            id="addEducation">
+
+            + Add Education
+
+        </button>
+
+        <!-- Continue with Experience, Projects,
+             Skills, Certifications, Languages,
+             Achievements, Interests, Template Selection,
+             and Submit Buttons -->
+
+    </form>
+
+</div>
+
+<script src="js/script.js"></script>
+<script src="js/validation.js"></script>
+
+</body>
+</html>
